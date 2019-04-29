@@ -4,6 +4,7 @@ body, html {
 
 .aboutme-cover {
   background-image: url("img/AboutMeBackground.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -11,6 +12,62 @@ body, html {
 
 .lessons-cover {
   background-image: url("img/LessonsBackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.arraylists-cover {
+  background-image: url("img/LessonBackground1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.arrays-cover {
+  background-image: url("img/LessonBackground2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.oop1-cover {
+  background-image: url("img/LessonBackground3.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.oop2-cover {
+  background-image: url("img/LessonBackground4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.recursion-cover {
+  background-image: url("img/LessonBackground7.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.searching-cover {
+  background-image: url("img/LessonBackground6.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.sorting-cover {
+  background-image: url("img/LessonBackground5.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: top center;
