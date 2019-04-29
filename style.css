@@ -93,4 +93,5 @@ body, html {
 @media (max-width: 576px) {
   .display-4 {font-size: 3rem;}
   .lead {font-size: 0.75rem;}
+  .bg-gradient {background-color: var(--dark);}
 }
