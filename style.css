@@ -2,6 +2,10 @@ body, html {
   height: 100%;
 }
 
+.cover-text {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 .aboutme-cover {
   background-image: url("img/AboutMeBackground.jpg");
   background-attachment: fixed;
@@ -88,6 +92,10 @@ body, html {
 
 .bg-gradient {
   background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0,0,0,0));
+}
+
+.bg-darker {
+  background-color: #22262a;
 }
 
 @media (max-width: 576px) {
