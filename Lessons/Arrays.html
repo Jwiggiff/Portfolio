@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../style.css">
-  <title>Josh's Portfolio | Lessons</title>
+  <title>Josh's Portfolio | Arrays</title>
 </head>
-<body class="bg-dark">
+<body class="bg-dark" data-spy="scroll" data-target="#toc" data-offset="50">
   <nav class="navbar navbar-dark bg-gradient navbar-expand-sm fixed-top">
     <a href="../index.html" class="navbar-brand">Josh Friedman</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -40,17 +40,88 @@
       </ul>
     </div>
   </nav>
-  <div class="jumbotron jumbotron-fluid arrays-cover h-100 d-flex">
+  <div id="cover" class="jumbotron jumbotron-fluid arrays-cover h-100 d-flex">
     <div class="container text-light inner-cover row m-auto justify-content-center align-self-center">
       <div class="cover-text rounded text-center p-3 justify-content-center">
-        <h1 class="display-4">Arrays</h1>
+        <h1 class="display-1">Arrays</h1>
         <p class="lead">
           In this lesson you will learn how to use Arrays in Java.
         </p>
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container text-light">
+    <div class="row">
+      <div class="col-9">
+        <h1 id="introduction">Introduction</h1>
+        <p>
+          Arrays are a feature of the Java API that allow the programmer to store a list of values. arrays can store any primitive type or objects. In this lesson you will learn about how Arrays work, and how to use them in your programs.
+        </p>
+        <h1 id="declaring">Declaring an Array</h1>
+        <p>
+          First, we will learn about the basics of arrays. Arrays are lists of values that can be accessed by index. Here is an example of how you would define and initiate an array of ints in Java.
+        </p>
+        <pre><code>int[] arr = new int[5];</code></pre>
+        <p>As you can see, it is very similar to defining a regular variable. First, we have the type of the values that will be stored in the array, in this case <code>int</code>. Then we follow it with an opening and closing square brackets (<code>[]</code>) which tells Java that this is an array instead of just one <code>int</code>. Then we have the name of the variable, in this case <code>arr</code>. Next, is the equals sign and then <code>new int[5]</code>. This tells Java that we want to make a new int array of length 5. In Java, arrays are a fixed length, meaning that once we define the array it cannot be resized. Knowing all of this information, we can write the syntax to define an array in Java as this.</p>
+        <pre><code>&lt;type of variable&gt;[] &lt;variable name&gt; = new &lt;type of variable&gt;[&lt;length of array&gt;];</code></pre>
+        <p>Arrays can be of any primitive type or object. For example if you wanted to define an array of Strings, you'd do this.</p>
+        <pre><code>String[] arr = new String[5];</code></pre>
+        <p>The past examples were all examples of one-dimensional arrays. This means that the dimensions of the array are 1 by the length of the array. However, Java also allows you to have multi-dimensional arrays. Besides 1D arrays, the most common arrays are 2D and 3D arrays. Here are examples of defining 2D and 3D arrays.</p>
+        <pre><code>
+          //2D int array
+          int[][] arr = new int[5][5];
+          //3D int array
+          int[][][] arr = new int[5][5][5];
+        </code></pre>
+        <h1 id="initializing">Initializing an Array</h1>
+        <p>Initializing an array is putting values into an array. When you declare an array, each index is either initialized to <code>0</code>, <code>false</code> or <code>null</code> depending on the data type. To set a specific index in an array you would do the following.</p>
+        <pre><code>arr[0] = 4;</code></pre>
+        <p>In this example, <code>arr</code> is the name of the array and <code>0</code> is the index. <code>4</code> is the value we are assigning to that index in the array. If we wanted to assign multiple indexes, you'd write it as follows.</p>
+        <pre><code>//Sets value at index 0 to 4
+          arr[0] = 4;
+          //Sets value at index 2 to 6
+          arr[2] = 6;
+          //Sets value at index 1 to 32
+          arr[1] = 32;</code></pre>
+          <p>You can also intialize the array in the same line as you declare it.</p>
+          <pre><code>int[] arr = {2, 4, 6, 8, 10};</code></pre>
+          <p>If you wanted to initialize all indexes of an array, you could use a for loop to loop through each index in the array as follows.</p>
+          <pre><code>for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+          }</code></pre>
+          <p>As you can see, we used a property of the array called <code>length</code>. This property can be used whenever you want to access the length of the array. However, remember that since arrays are not resizeable, once you declare an array, the <code>length</code> property is static.</p>
+          <h1 id="accessing">Accessing an Array</h1>
+          <p>As you may have noticed above, to access a specific index in an array, you use the name of the array followed by the index you want to access enclosed in square brackets.</p>
+          <pre><code>System.out.println(arr[3]);</code></pre>
+          <p>The above example will print out the value in the third index of the array. One important thing to note is that indexes in an array begin at 0. This means that the first value in an array is at index 0, not index 1.</p>
+          <h1 id="review">Review</h1>
+          <p>What you need to know about arrays:</p>
+          <ul>
+            <li>Declared using the following syntax: <pre><code>&lt;type of variable&gt;[] &lt;variable name&gt; = new &lt;type of variable&gt;[&lt;length of array&gt;];</code></pre></li>
+            <li>initialized using one of three methods:</li>
+            <ul>
+              <li>For a single element: <pre><code>arr[0] = 6;</code></pre></li>
+              <li>For all the elements: <pre><code>for (int i = 0; i < arr.length; i++) {
+                arr[i] = i;
+              }</code></pre>
+            </li>
+            <li>In the same line as declaration: <pre><code>int[] arr = {2, 4, 6, 8};</code></pre></li>
+          </ul>
+          <li>To access the length of an array, use the <code>length</code> property</li>
+          <li>To access an index in an array, use the name of the array followed by the index you want to access enclosed in square brackets</li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <div id="toc" class="list-group">
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#cover">Arrays</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#introduction">Introduction</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#declaring">Declaring an Array</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#initializing">Initializing an Array</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#accessing">Accessing an Array</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#review">Review</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap JS stuff -->

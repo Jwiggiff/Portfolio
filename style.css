@@ -2,6 +2,19 @@ body, html {
   height: 100%;
 }
 
+pre {
+  background-color: #22262a;
+  color: #f8f9fa;
+  padding: .5rem;
+  border-radius: .25rem;
+}
+
+#toc {
+  position: sticky;
+  top: 60px;
+  margin-right: 0;
+}
+
 .cover-text {
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -101,5 +114,8 @@ body, html {
 @media (max-width: 576px) {
   .display-4 {font-size: 3rem;}
   .lead {font-size: 0.75rem;}
-  .bg-gradient {background-color: var(--dark);}
+  .bg-gradient {
+    background-color: var(--dark);
+    background-image: none;
+  }
 }
