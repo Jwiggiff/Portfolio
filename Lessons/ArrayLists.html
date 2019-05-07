@@ -54,18 +54,62 @@
     <div class="row">
       <div class="col-9">
         <h1 id="introduction">Introduction</h1>
-        <h1 id="Declaring an ArrayList"></h1>
-        <h1 id="initializing">Initializing an ArrayList</h1>
-        <h1 id="accessing">Accessing an ArrayList</h1>
+        <p>In Java, an ArrayList implements a List using an array. ArrayLists can only hold objects, not primitive types. Unlike arrays, ArrayLists are resizeable. ArrayLists keep track of both the capacity, and the current size of the array. The ArrayList class is found in the <code>java.util</code> package, so it must be imported at the top of your program like so:</p>
+        <pre><code>import java.util.ArrayList;</code></pre>
+        <h1 id="declaring">Declaring an ArrayList</h1>
+        <p>When declaring an ArrayList, you must include the type of object that will be stored in angle brackets as shown below.</p>
+        <pre><code>ArrayList&lt;String&gt; words = new ArrayList&lt;String&gt;();
+ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();</code></pre>
+        <p>In Java Docs, the letter <b><i>E</i></b> is used to denote the type parameter. There are 2 constructors for ArrayLists.</p>
+        <pre><code>//This will create an empty ArrayList of default capacity, which is 10
+ArrayList&lt;E&gt;()
+
+//This will create an empty ArrayList of the specified capacity
+ArrayList&lt;E&gt;(int capacity)</code></pre>
+        <h1 id="methods">Methods</h1>
+        <p>The methods for the ArrayList class are as follows.</p>
+        <pre><code>int size() //returns the size of the ArrayList
+boolean isEmpty () //returns true if the ArrayList is empty, otherwise false
+boolean add (E obj) //adds a new object to the ArrayList
+void add (int i, E obj) //inserts the object <var>obj</var> at index <var>i</var>. <var>i</var> must be from - to size()
+E set (int i, E obj) //sets index <var>i</var> to object <var>obj</var> and returns the set object
+E get (int i) //returns the object at index <var>i</var>
+E remove (int i) //removes the object at index <var>i</var> and returns the removed object
+boolean contains (E obj) //returns true of <var>obj</var> is found in the array, otherwise false
+int indexOf (E obj) //returns the index of <var>obj</var> if it is found, otherwise -1</code></pre>
+        <p>Here is an example of how an ArrayList might be implemented.</p>
+        <pre><code>ArrayList&lt;String&gt; cities = new ArrayList&lt;String&gt;();
+cities.add("Toronto");
+cities.add("Boston");
+cities.add(0, "New York");
+System.out.println(cities);</code></pre>
+        <p>Which would output</p>
+        <samp>[New York, Toronto, Boston]</samp><br><br>
+        <p>The toString() method of ArrayList returns each element in the array seperated by commas, enclosed in [].</p>
+        <h1 id="primitive">Using Primitive Types in an ArrayList</h1>
+        <p>Now you might be thinking, <i>But I thought you said you can't use primtive data types in ArrayLists?</i> Well, you'd be correct. However, thanks to something called Autoboxing, primitive data types will automatically be converted to their wrapper classes when being added to an ArrayList.</p>
+        <pre><code>ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+
+nums.add(14);
+nums.get(0); //returns 14</code></pre>
         <h1 id="review">Review</h1>
+        <h5>What you need to know about ArrayLists:</h5>
+        <ul>
+          <li>The ArrayList class is found in the <code>java.util</code> package, so you must import that at the beginning of your program</li>
+          <li>ArrayLists are resizeable arrays</li>
+          <li>ArrayLists use the method <code>size()</code> to get the length of the array instead of the <code>length</code> property</li>
+          <li>ArrayLists are declared similar to an object, and must include the object type that will be stored in the ArrayList</li>
+          <li>You can use the <code>add (E obj)</code> method to add an element to the end of the array, and the <code>add(int i, E obj)</code> method to add an element at the specified index</li>
+          <li>You can use the <code>get(int i)</code> method to access an element in the array</li>
+        </ul>
       </div>
       <div class="col-sm-3">
         <div id="toc" class="list-group">
-          <a class="list-group-item list-group-item-action bg-darker text-light" href="#cover">Arrays</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#cover">ArrayLists</a>
           <a class="list-group-item list-group-item-action bg-darker text-light" href="#introduction">Introduction</a>
-          <a class="list-group-item list-group-item-action bg-darker text-light" href="#declaring">Declaring an Array</a>
-          <a class="list-group-item list-group-item-action bg-darker text-light" href="#initializing">Initializing an Array</a>
-          <a class="list-group-item list-group-item-action bg-darker text-light" href="#accessing">Accessing an Array</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#declaring">Declaring an ArrayList</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#methods">Methods</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#primitive">Using Primitive Types in an ArrayList</a>
           <a class="list-group-item list-group-item-action bg-darker text-light" href="#review">Review</a>
         </div>
       </div>
