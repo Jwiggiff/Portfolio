@@ -111,6 +111,16 @@ pre {
   background-color: #22262a;
 }
 
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: #000000;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs.bg-darker .nav-link.active {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
 @media (max-width: 576px) {
   .display-4 {font-size: 3rem;}
   .lead {font-size: 0.75rem;}

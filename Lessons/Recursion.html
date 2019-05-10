@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../style.css">
   <title>Josh's Portfolio | Recursion</title>
 </head>
-<body class="bg-dark">
+<body class="bg-dark" data-spy="scroll" data-target="#toc" data-offset="50">
   <nav class="navbar navbar-dark bg-gradient navbar-expand-sm fixed-top">
     <a href="../index.html" class="navbar-brand">Josh Friedman</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -25,22 +25,23 @@
           <div class="dropdown-menu dropdown-menu-right">
             <a href="index.html" class="dropdown-item">Lesson Catalogue</a>
             <div class="dropdown-divider"></div>
-            <a href="OOP1.html" class="dropdown-item">OOP - Part 1</a>
-            <a href="OOP2.html" class="dropdown-item">OOP - Part 2</a>
+            <a href="OOP.html" class="dropdown-item">OOP</a>
             <a href="Arrays.html" class="dropdown-item">Arrays</a>
             <a href="ArrayLists.html" class="dropdown-item">ArrayLists</a>
             <a href="Sorting.html" class="dropdown-item">Sorting Arrays & ArrayLists</a>
             <a href="Searching.html" class="dropdown-item">Searching Arrays & ArrayLists</a>
             <a href="Recursion.html" class="dropdown-item active">Recursion</a>
+            <div class="dropdown-divider"></div>
+            <a href="Bibliography.html" class="dropdown-item">Bibliography</a>
           </div>
         </li>
         <li class="navbar-item">
-          <a href="#" class="nav-link">Projects</a>
+          <a href="Projects/index.html" class="nav-link">Projects</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="jumbotron jumbotron-fluid recursion-cover h-100 d-flex">
+  <div id="cover" class="jumbotron jumbotron-fluid recursion-cover h-100 d-flex">
     <div class="container text-light inner-cover row m-auto justify-content-center align-self-center">
       <div class="cover-text rounded text-center  p-3 justify-content-center">
         <h1 class="display-1">Recursion</h1>
@@ -50,7 +51,34 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container text-light">
+    <div class="row">
+      <div class="col-9">
+        <h1 id="introduction">Introduction</h1>
+        <p>Recursion is a concept in computer programming that generally refers to a method, function, or procedure that will continuously call itself until a specific case is met. This can be very useful in situations such as tree traversals, Depth First Search, etc. Many problems can be solved quite easily using recursion.</p>
+        <h1 id="base-case">Base Case</h1>
+        <p>The first part of a recursive function is the base case. This is the case that, if true, will end the recursion and not call the recursive function again.</p>
+        <pre><code>public int factorial(int n) {
+          if (n <= 1) //The base case
+            return 1;
+          return n*factorial(n-1);
+        }</code></pre>
+        <p>In the above example, the base case is <code>n<=1</code>. If this base case is false, it recursively calls itself but decreases n by 1. This means that n will keep shrinking until n is less than or equal to 1. This method is a simple implementation of factorial. Factorial in math is basically taking every number from 1 to that number and multiplying it. For example, 5! (the exclamation mark means factorial), would be equivelant to 1&times;2&times;3&times;4&times;5 which is 120. This can be simplified into sets of smaller problems. 5! can be simplified to 5&times;4! which can be simplified to 5&times;4&times;3! etc. This is the basic concept of recursion.</p>
+        <h1 id="stack-overflow">Stack Overflow Error</h1>
+        <p>One very common error that occurs when using recursion is Stack Overflow. This means that the stack, which is the list of methods being called, has grown too big for the computer to handle. This often occurs in recursion when the base case has been written incorrectly and therefore is never reached. This causes a Stack Overflow error because the function will continuously call itself forever since the base case is never met.</p>
+        <h1 id="advantages-disadvantages">Advantages & Disadvantages</h1>
+        <p>Every recursive program can be writter iteratively with a loop, and vice versa. However, there are advantages and disadvantages to both strategies. Disadvantages of recursive programming include a much larger space requirement since each function will remain in the stack until the base case is reached, and it has greater time requirements as well due to the function calls and delay time of returning from a function. However, recursive prgoramming also has many advantages. Recursion provides a much cleaner and simpler way of righting code to solve these types of problems. Some problems are more optimal for recursive solutions such as tree traversals, however even these can be solved with iterative solutions as well.</p>
+      </div>
+      <div class="col-sm-3">
+        <div id="toc" class="list-group">
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#cover">Recursion</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#introduction">Introduction</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#base-case">Base Case</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#stack-overflow">Stack Overflow Error</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#advantages-disadvantages">Advantages & Disadvantages</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap JS stuff -->

@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <title>Josh's Portfolio</title>
 </head>
-<body>
+<body class="bg-dark">
   <nav class="navbar navbar-dark bg-gradient navbar-expand-sm fixed-top">
     <a href="#" class="navbar-brand">Josh Friedman</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -25,17 +27,17 @@
           <div class="dropdown-menu dropdown-menu-right">
             <a href="Lessons/index.html" class="dropdown-item">Lesson Catalogue</a>
             <div class="dropdown-divider"></div>
-            <a href="Lessons/OOP1.html" class="dropdown-item">OOP - Part 1</a>
-            <a href="Lessons/OOP2.html" class="dropdown-item">OOP - Part 2</a>
+            <a href="Lessons/OOP.html" class="dropdown-item">OOP</a>
             <a href="Lessons/Arrays.html" class="dropdown-item">Arrays</a>
             <a href="Lessons/ArrayLists.html" class="dropdown-item">ArrayLists</a>
             <a href="Lessons/Sorting.html" class="dropdown-item">Sorting Arrays & ArrayLists</a>
             <a href="Lessons/Searching.html" class="dropdown-item">Searching Arrays & ArrayLists</a>
             <a href="Lessons/Recursion.html" class="dropdown-item">Recursion</a>
+            <a href="Lessons/Bibliography.html" class="dropdown-item">Bibliography</a>
           </div>
         </li>
         <li class="navbar-item">
-          <a href="#" class="nav-link">Projects</a>
+          <a href="Projects/index.html" class="nav-link">Projects</a>
         </li>
       </ul>
     </div>
@@ -45,6 +47,60 @@
       <div class="col-md-6">
         <h1 class="display-4">About Me</h1>
         <p class="lead">Hello! I'm Josh Friedman, a student at William Lyon Mackenzie C.I. I am currently in grade 10.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center text-light">
+    <h1>Interests & Skills</h1>
+    <div class="card text-center bg-darker">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs nav-justified bg-darker navbar-dark" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="programming-tab" data-toggle="tab" href="#programming" role="tab">
+              <i class="fas fa-terminal"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="music-tab" data-toggle="tab" href="#music" role="tab">
+              <i class="fas fa-music"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="martial-arts-tab" data-toggle="tab" href="#martial-arts" role="tab">
+              <i class="fas fa-user-ninja"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="programming" role="tabpanel">
+            <h5 class="card-title">Programming</h5>
+            <p class="card-text">
+              I've been programming as a hobby since grade 5, and am constantly curious and interested as to what the next thing is that I can create or learn related to programming.
+              <br>
+              <br>
+              <b>Languages:</b> Java, JavaScript, HTML
+              <br>
+              <b>Frameworks:</b> Bootstrap v4, Vue.JS, Node.JS
+              <br>
+              <br>
+              To see some examples of my past projects, check out the <a href="#">Projects page.</a>
+            </p>
+          </div>
+          <div class="tab-pane fade" id="music" role="tabpanel">
+            <h5 class="card-title">Music</h5>
+            <p class="card-text">
+              I've been interested in music ever since I can remember. I've been playing guitar for 5 years and tenor saxophone for 2 years. I am also interested in eletronic production of music. Besides creating music, I also listen to music a lot. I enjoy many different kinds of music from hip hop and rap, to classic rock and classic acoustic.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="martial-arts" role="tabpanel">
+            <h5 class="card-title">Martial Arts</h5>
+            <p class="card-text">
+              Martial arts have been an important part of my life since I was about 3 years old. I took my first karate class when I was 3, and immediately fell in love. I've been doing karate with the same school ever since then. I recently reached my third level blackbelt. I am also interested in other martial arts such as krav maga, and am beginning classes for that as well.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

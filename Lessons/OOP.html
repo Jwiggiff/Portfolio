@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <title>Josh's Portfolio | OOP #1</title>
+</head>
+<body class="bg-dark" data-spy="scroll" data-target="#toc" data-offset="50">
+  <nav class="navbar navbar-dark bg-gradient navbar-expand-sm fixed-top">
+    <a href="../index.html" class="navbar-brand">Josh Friedman</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="navbar-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="navbar-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Lessons</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="index.html" class="dropdown-item">Lesson Catalogue</a>
+            <div class="dropdown-divider"></div>
+            <a href="OOP.html" class="dropdown-item active">OOP</a>
+            <a href="Arrays.html" class="dropdown-item">Arrays</a>
+            <a href="ArrayLists.html" class="dropdown-item">ArrayLists</a>
+            <a href="Sorting.html" class="dropdown-item">Sorting Arrays & ArrayLists</a>
+            <a href="Searching.html" class="dropdown-item">Searching Arrays & ArrayLists</a>
+            <a href="Recursion.html" class="dropdown-item">Recursion</a>
+            <div class="dropdown-divider"></div>
+            <a href="Bibliography.html" class="dropdown-item">Bibliography</a>
+          </div>
+        </li>
+        <li class="navbar-item">
+          <a href="Projects/index.html" class="nav-link">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="cover" class="jumbotron jumbotron-fluid oop1-cover h-100 d-flex">
+    <div class="container text-light inner-cover row m-auto justify-content-center align-self-center">
+      <div class="cover-text rounded text-center  p-3 justify-content-center">
+        <h1 class="display-1">OOP</h1>
+        <p class="lead">In this lesson you will learn the basics of Object Oriented Programming in Java.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container text-light">
+    <div class="row">
+      <div class="col-9">
+        <h1 id="introduction">Introduction</h1>
+        <p>Object Orient Programming (OOP) is a way of programming in a more organized way using reusable blocks of code, like templates.</p>
+        <h1 id="classes-objects">Classes & Objects</h1>
+        <p>A class in Java is a user defined blueprint from which objects can be created. It represents a set of methods and/or properties that all objects of some type must have. Objects are the products that are made from these class blueprints. In a class, a constructor is used to create an object of that class. Constructors can require parameters as well that will be set when an object is created. For example, a dog class would take parameters such as the breed and the name of the dog.</p>
+        <h1 id="methods-variables">Methods & Instance Variables</h1>
+        <p>Classes contain methods and instance variables that all objects of that type will contain. Methods represent behaviours or actions that can be taken, while instance variables or properties represent information about the object. For example, a dog class may contain methods such as bark, eat, and poop, and properties such as name, breed, weight, and age.</p>
+        <h1 id="public-private">Public VS. Private</h1>
+        <p>Modifiers are used to change which parts of a program can access specific properties or methods of a class. Modifiers are written before the type of a variable or return type of a method. For example:</p>
+        <pre><code>private String str = "Hello, World!";
+public double num = 45.3;</code></pre>
+        <p>Encapsulation is a way of hiding the properties of a class from all other classes. This prevents unauthorized and incorrect manipulation of properties. Encapsulation can be achieved by declaring all of the instance variables of a class as private, and then create public set and get methods that can change and access these variables.</p>
+        <h1 id="static">Static Methods & Variables</h1>
+        <p><code>static</code> is a keyword that can be used in Java to make methods or properties belong to the class itself instead of the object. By default, methods and properties defined in a class are not accessible until an object is created of that class. Then, these methods and properties can be accessed using the object's name. With static, however, you can make methods and properties accessible before an object is created. You can use either the class name or an object name of an object has been created to access these methods and properties, however it is best practice to use the class name to access static variables. Furthermore, static variables are shared between all objects of a type. This means that if I were to define two objects of the same type, and change a static variable in one of the objects, it would change in the other object as well.</p>
+        <h1 id="inheritance">Inheritance</h1>
+        <p>Classes can also extend other classes, known as superclasses. This allows a programmer to create a class hierarchy. For example, you might have a superclass <code>Animal</code> and then have two subclasses, <code>Dog</code> and <code>Cat</code> that both extend <code>Animal</code>. This can be very helpful when you want to have a bunch of classes that all have shared methods and variables. You can use inheritance using the <code>extends</code> keyword as shown below.</p>
+        <pre><code>class Animal {...} //The superclass
+class Dog extends Animal {...}  //A subclass of Animal
+class Cat extends Animal {...} //Another subclass of Animal</code></pre>
+        <h1 id="abstract">Abstract Classes & Methods</h1>
+        <p>Abstract classes are a form of superclasses. Abstract classes contain the absolute barebones of a superclass. Abstract classes define the properties just like a normal class, but the methods are only defined by their signature. Abstract methods, which are methods within an abstract class, contain no body. They instead rely on being implemented in the subclasses. Unlike superclasses, an object cannot be created from an abstract class by itself. An abstract class <b>must</b> be extended for it to be used. Note that not all methods in an abstract class need to be abstract</p>
+        <pre><code>abstract class Animal {
+    abstract void makeSound();
+    abstract void eat(String food);
+
+    public int getAge() {
+      return age;
+    }
+  }
+
+class Dog extends Animal {
+  void makeSound() {
+    /* implementation of the makeSound method */
+  }
+
+  void eat() {
+    /* implementation of the eat method */
+  }
+}</code></pre>
+        <h1 id="polymorphism">Polymorphism</h1>
+        <p>Polymorphism is Java's ability to differentiate between two entities with identical names. Java uses the entities signatures to differentiate between them. Polymorphism in Java is usually in two forms, overloading and overriding. Overloading is when you have multiple methods with the same name but with different signatures. Overriding is when a subclass provides a new implementation of a method that a superclass provides.</p>
+      </div>
+      <div class="col-sm-3">
+        <div id="toc" class="list-group">
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#cover">OOP</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#introduction">Introduction</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#classes-objects">Classes & Objects</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#methods-variables">Methods & Instance Variables </a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#public-private">Public VS. Private</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#static">Static Methods & Variables</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#inheritance">Inheritance</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#abstract">Abstract Classes & Methods</a>
+          <a class="list-group-item list-group-item-action bg-darker text-light" href="#polymorphism">Polymorphism</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS stuff -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
